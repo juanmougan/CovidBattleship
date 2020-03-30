@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CovidBattleship</string>
+    <string name="water_cell_img_description">Ocean here</string>
+</resources>
