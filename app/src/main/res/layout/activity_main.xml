@@ -6,298 +6,196 @@
     android:orientation="vertical">
 
     <TableLayout
+        android:id="@+id/player_board"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
         android:paddingStart="5dp"
+        android:paddingTop="10dp"
         android:paddingEnd="5dp"
+        android:paddingBottom="10dp"
         android:shrinkColumns="*">
 
+        <!-- TODO find out if I can extract this TableRow (would need to parametrize its first index) -->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="2dp"
-            android:weightSum="1"
-            android:layout_weight="1">
-
-            <ImageButton
-                android:id="@+id/one_one_btn"
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                android:id="@+id/one_two_btn"
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                android:id="@+id/one_three_btn"
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
+            android:layout_weight="1"
+            android:weightSum="1">
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_0_0_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_0_1_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_0_2_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_0_3_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_0_4_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_0_5_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_0_6_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_0_7_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_0_8_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_0_9_btn" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="2dp"
-            android:weightSum="1"
-            android:layout_weight="1">
-
-            <ImageButton
-                android:id="@+id/two_one_btn"
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:background="@null"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                android:id="@+id/two_two_btn"
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                android:id="@+id/two_three_btn"
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-               
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
-
-            <ImageButton
-                style="@android:style/Widget.Holo.Button.Borderless"
-                android:scaleType="fitXY"
-
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/water_cell_img_description"
-                android:maxWidth="20dp"
-                android:src="@drawable/blue_square_small"
-                android:stateListAnimator="@null"
-                android:text=""
-                android:textOff=""
-                android:textOn="" />
+            android:layout_weight="1"
+            android:weightSum="1">
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_1_0_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_1_1_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_1_2_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_1_3_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_1_4_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_1_5_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_1_6_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_1_7_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_1_8_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_1_9_btn" />
         </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_2_0_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_2_1_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_2_2_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_2_3_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_2_4_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_2_5_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_2_6_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_2_7_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_2_8_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_2_9_btn" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_3_0_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_3_1_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_3_2_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_3_3_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_3_4_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_3_5_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_3_6_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_3_7_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_3_8_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_3_9_btn" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_4_0_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_4_1_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_4_2_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_4_3_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_4_4_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_4_5_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_4_6_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_4_7_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_4_8_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_4_9_btn" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_5_0_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_5_1_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_5_2_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_5_3_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_5_4_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_5_5_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_5_6_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_5_7_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_5_8_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_5_9_btn" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_6_0_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_6_1_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_6_2_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_6_3_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_6_4_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_6_5_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_6_6_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_6_7_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_6_8_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_6_9_btn" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_7_0_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_7_1_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_7_2_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_7_3_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_7_4_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_7_5_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_7_6_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_7_7_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_7_8_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_7_9_btn" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_8_0_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_8_1_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_8_2_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_8_3_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_8_4_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_8_5_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_8_6_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_8_7_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_8_8_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_8_9_btn" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_9_0_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_9_1_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_9_2_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_9_3_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_9_4_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_9_5_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_9_6_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_9_7_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_9_8_btn" />
+            <include layout="@layout/clickable_board_cell" android:id="@+id/cell_9_9_btn" />
+        </TableRow>
+
     </TableLayout>
 
     <TextView

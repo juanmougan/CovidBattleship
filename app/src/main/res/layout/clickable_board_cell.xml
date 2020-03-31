@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@android:style/Widget.Holo.Button.Borderless"
+    android:scaleType="fitXY"
+
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/water_cell_img_description"
+    android:maxWidth="20dp"
+    android:src="@drawable/blue_square_small"
+    android:stateListAnimator="@null"
+    android:text=""
+    android:textOff=""
+    android:textOn=""
+    tools:showIn="@layout/activity_main" />
