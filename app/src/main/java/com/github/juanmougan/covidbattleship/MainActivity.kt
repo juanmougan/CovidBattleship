@@ -25,16 +25,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        fillBoardWithSeaCells()
         addListenersToAllButtons()
-    }
-
-    private fun fillBoardWithSeaCells() {
-        for (rows in 0 until BOARD_ROW_NUMBER) {
-            for (cols in 0 until BOARD_COL_NUMBER_PER_ROW) {
-                boardStatus[rows]?.set(cols, CellStatus.SEA)
-            }
-        }
     }
 
     private fun addListenersToAllButtons() {
