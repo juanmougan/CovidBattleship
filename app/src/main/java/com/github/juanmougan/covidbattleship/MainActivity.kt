@@ -18,35 +18,47 @@ class MainActivity : AppCompatActivity() {
     }
 
     private lateinit var playerBoard: TableLayout
+    private var boardStatus: Array<Array<CellStatus>> = Array(BOARD_ROW_NUMBER) {
+        Array(BOARD_COL_NUMBER_PER_ROW) { CellStatus.SEA }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+//        fillBoardWithSeaCells()
         addListenersToAllButtons()
     }
 
-    fun addListenersToAllButtons() {
+    private fun fillBoardWithSeaCells() {
+        for (rows in 0 until BOARD_ROW_NUMBER) {
+            for (cols in 0 until BOARD_COL_NUMBER_PER_ROW) {
+                boardStatus[rows]?.set(cols, CellStatus.SEA)
+            }
+        }
+    }
+
+    private fun addListenersToAllButtons() {
         val res: Resources = resources
         playerBoard = findViewById(R.id.player_board)
         for (rows in 0 until BOARD_ROW_NUMBER) {
-            val rowId = "row_$rows"
             for (cols in 0 until BOARD_COL_NUMBER_PER_ROW) {
                 val cellIdentifier = String.format(BOARD_ID_TEMPLATE, rows, cols)
                 val cellId = res.getIdentifier(cellIdentifier, "id", this.packageName)
                 val cellButton = findViewById<ImageButton>(cellId)
+                cellButton.tag = boardStatus[rows][cols]
                 addListenerToButton(cellButton)
             }
         }
     }
 
-    // TODO logic should be
-    // 1. onClick, toggle status in the matrix (Sea to Ship or vice versa)
-    // 2. If status == Sea set blue drawable, else set grey drawable
     private fun addListenerToButton(cellButton: ImageButton?) {
         cellButton?.setOnClickListener(View.OnClickListener { b ->
             val button: ImageButton = b as ImageButton
+            val currentStatus: CellStatus = button.tag as CellStatus
+            val newStatus = currentStatus.toggle()
             // TODO this is deprecated, but I'm not using any theme :shrug
-            button.setImageDrawable(resources.getDrawable(R.drawable.grey_square_small))
+            button.setImageDrawable(resources.getDrawable(newStatus.imageId))
+            button.tag = newStatus
         })
     }
 
