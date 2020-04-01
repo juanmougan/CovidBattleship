@@ -39,11 +39,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // TODO logic should be
+    // 1. onClick, toggle status in the matrix (Sea to Ship or vice versa)
+    // 2. If status == Sea set blue drawable, else set grey drawable
     private fun addListenerToButton(cellButton: ImageButton?) {
         cellButton?.setOnClickListener(View.OnClickListener { b ->
-            // TODO add proper behaviour
-            Toast.makeText(this, "Clicked button with id: " + b.id, Toast.LENGTH_LONG)
-                .show()
+            val button: ImageButton = b as ImageButton
+            // TODO this is deprecated, but I'm not using any theme :shrug
+            button.setImageDrawable(resources.getDrawable(R.drawable.grey_square_small))
         })
     }
 
