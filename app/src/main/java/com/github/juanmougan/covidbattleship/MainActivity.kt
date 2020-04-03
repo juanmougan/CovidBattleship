@@ -24,17 +24,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         addListenersToAllButtons()
-//        addCreateGameListener()
     }
 
     fun createGame(view: View) {
-        //val editText = findViewById<EditText>(R.id.editText)
-        //        val message = editText.text.toString()
         val playerOneText = this.findViewById<EditText>(R.id.player_1_name)
         val playerOneName = playerOneText.text.toString()
         // TODO submit Game (POST on Retrofit)
 
         // TODO if POST is 201, transition to a new Activity: example here
+        // TODO think about serializing the board to re-draw it in the next Activity
+        // TODO the other possibility is to retrieve it with another network call
         // val intent = Intent(this, DisplayMessageActivity::class.java).apply {
         //            putExtra(EXTRA_MESSAGE, message)
         //        }
@@ -42,15 +41,6 @@ class MainActivity : AppCompatActivity() {
 
         Toast.makeText(this, "Got this: $playerOneName", Toast.LENGTH_LONG).show()
     }
-
-//    private fun addCreateGameListener() {
-//        playerOneText = findViewById(R.id.player_1_name)
-//        submitButton = findViewById(R.id.create_game_submit)
-//        submitButton.setOnClickListener {b ->
-//            val playerOneName = playerOneText.text.toString()
-//
-//        }
-//    }
 
     private fun addListenersToAllButtons() {
         val res: Resources = resources
@@ -60,20 +50,24 @@ class MainActivity : AppCompatActivity() {
                 val cellIdentifier = String.format(BOARD_ID_TEMPLATE, rows, cols)
                 val cellId = res.getIdentifier(cellIdentifier, "id", this.packageName)
                 val cellButton = findViewById<ImageButton>(cellId)
-                cellButton.tag = boardStatus[rows][cols]
+                cellButton.tag = Cell(Pair(rows, cols), boardStatus[rows][cols])
                 addListenerToButton(cellButton)
             }
         }
     }
 
     private fun addListenerToButton(cellButton: ImageButton?) {
+        // TODO extract methods in this listener, this is a mess :(
         cellButton?.setOnClickListener { b ->
             val button: ImageButton = b as ImageButton
-            val currentStatus: CellStatus = button.tag as CellStatus
+            val clickedCell = button.tag as Cell
+            val currentStatus = clickedCell.status
             val newStatus = currentStatus.toggle()
             // TODO this is deprecated, but I'm not using any theme :shrug
             button.setImageDrawable(resources.getDrawable(newStatus.imageId))
-            button.tag = newStatus
+            clickedCell.status = newStatus
+            button.tag = clickedCell
+            boardStatus[clickedCell.coordinates.first][clickedCell.coordinates.second] = clickedCell.status
         }
     }
 
