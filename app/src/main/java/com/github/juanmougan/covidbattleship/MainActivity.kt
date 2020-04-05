@@ -1,10 +1,13 @@
 package com.github.juanmougan.covidbattleship
 
+import android.annotation.SuppressLint
 import android.content.res.Resources
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,20 +29,36 @@ class MainActivity : AppCompatActivity() {
         addListenersToAllButtons()
     }
 
+    @SuppressLint("CheckResult")
     fun createGame(view: View) {
         val playerOneText = this.findViewById<EditText>(R.id.player_1_name)
         val playerOneName = playerOneText.text.toString()
-        // TODO submit Game (POST on Retrofit)
 
-        // TODO if POST is 201, transition to a new Activity: example here
-        // TODO think about serializing the board to re-draw it in the next Activity
-        // TODO the other possibility is to retrieve it with another network call
-        // val intent = Intent(this, DisplayMessageActivity::class.java).apply {
-        //            putExtra(EXTRA_MESSAGE, message)
-        //        }
-        //        startActivity(intent)
-
-        Toast.makeText(this, "Got this: $playerOneName", Toast.LENGTH_LONG).show()
+        // TODO move this logic to a web client object
+        // TODO probably show some loading bar
+        val observable = GameApiService.create().createGame(GameRequest(playerOneName, boardStatus))
+        observable.subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({ gameResponse ->
+                // TODO hide loading bar
+                Toast.makeText(this, "Created game with ID: ${gameResponse.id}", Toast.LENGTH_LONG)
+                    .show()
+                // TODO if POST is 201, transition to a new Activity: example here
+                // TODO think about serializing the board to re-draw it in the next Activity
+                // TODO the other possibility is to retrieve it with another network call
+                // val intent = Intent(this, DisplayMessageActivity::class.java).apply {
+                //            putExtra(EXTRA_MESSAGE, message)
+                //        }
+                //        startActivity(intent)
+            }, { error ->
+                // TODO hide loading bar
+                Toast.makeText(
+                    this,
+                    "Error creating game: ${error.message.toString()}",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+            )
     }
 
     private fun addListenersToAllButtons() {
@@ -67,7 +86,8 @@ class MainActivity : AppCompatActivity() {
             button.setImageDrawable(resources.getDrawable(newStatus.imageId))
             clickedCell.status = newStatus
             button.tag = clickedCell
-            boardStatus[clickedCell.coordinates.first][clickedCell.coordinates.second] = clickedCell.status
+            boardStatus[clickedCell.coordinates.first][clickedCell.coordinates.second] =
+                clickedCell.status
         }
     }
 
