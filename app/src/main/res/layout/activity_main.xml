@@ -498,8 +498,23 @@
 
     </TableLayout>
 
-    <TextView
+    <!-- TODO improve this to fill the whole row -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/app_name" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/player_1_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="@string/player_1_name_placeholder" />
+
+        <Button
+            android:id="@+id/create_game_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="createGame"
+            android:text="@string/create_game_submit" />
+    </LinearLayout>
 </LinearLayout>

@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">CovidBattleship</string>
     <string name="water_cell_img_description">Ocean here</string>
+    <string name="player_1_name_label">Your name</string>
+    <string name="player_1_name_placeholder">Player 1\'s name</string>
+    <string name="create_game_submit">Create game!</string>
 </resources>
