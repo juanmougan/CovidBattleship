@@ -8,5 +8,6 @@ data class GameResponse(
     @SerializedName("shareable_link")
     val shareableLink: String,
     @SerializedName("player_1")
-    val player1: Player
+    val player1: Player,
+    val status: GameStatus
 )

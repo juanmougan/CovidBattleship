@@ -5,12 +5,14 @@ import android.content.Intent
 import android.content.res.Resources
 import android.os.Bundle
 import android.view.View
-import android.widget.*
+import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.TableLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         const val BOARD_ROW_NUMBER = 10
         const val BOARD_COL_NUMBER_PER_ROW = 10
         const val BOARD_ID_TEMPLATE = "cell_%d_%d_btn"
+        const val GAME_BOARD_ID_TEMPLATE = "cell_board_%d_%d_btn"
+        const val GAME_SHOTS_ID_TEMPLATE = "cell_shots_%d_%d_btn"
         const val PLAYER_ONE_EXTRA = "playerOne"
         const val SHAREABLE_LINK_EXTRA = "shareableLink"
     }
@@ -26,7 +30,6 @@ class MainActivity : AppCompatActivity() {
     private var boardStatus: Array<Array<CellStatus>> = Array(BOARD_ROW_NUMBER) {
         Array(BOARD_COL_NUMBER_PER_ROW) { CellStatus.SEA }
     }
-    private lateinit var submitButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

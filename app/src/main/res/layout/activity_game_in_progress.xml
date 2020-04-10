@@ -9,6 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/player_board_banner" />
+
     <TableLayout
         android:id="@+id/player_board"
         android:layout_width="wrap_content"
@@ -28,91 +29,43 @@
             android:weightSum="1">
 
             <include
-                android:id="@+id/cell_0_0_btn"
+                android:id="@+id/cell_board_0_0_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_1_btn"
+                android:id="@+id/cell_board_0_1_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_2_btn"
+                android:id="@+id/cell_board_0_2_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_3_btn"
+                android:id="@+id/cell_board_0_3_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_4_btn"
+                android:id="@+id/cell_board_0_4_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_5_btn"
+                android:id="@+id/cell_board_0_5_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_6_btn"
+                android:id="@+id/cell_board_0_6_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_7_btn"
+                android:id="@+id/cell_board_0_7_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_8_btn"
+                android:id="@+id/cell_board_0_8_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_9_btn"
-                layout="@layout/clickable_board_cell" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:weightSum="1">
-
-            <include
-                android:id="@+id/cell_1_0_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_1_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_2_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_3_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_4_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_5_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_6_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_7_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_8_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_9_btn"
+                android:id="@+id/cell_board_0_9_btn"
                 layout="@layout/clickable_board_cell" />
         </TableRow>
 
@@ -124,91 +77,43 @@
             android:weightSum="1">
 
             <include
-                android:id="@+id/cell_2_0_btn"
+                android:id="@+id/cell_board_1_0_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_1_btn"
+                android:id="@+id/cell_board_1_1_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_2_btn"
+                android:id="@+id/cell_board_1_2_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_3_btn"
+                android:id="@+id/cell_board_1_3_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_4_btn"
+                android:id="@+id/cell_board_1_4_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_5_btn"
+                android:id="@+id/cell_board_1_5_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_6_btn"
+                android:id="@+id/cell_board_1_6_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_7_btn"
+                android:id="@+id/cell_board_1_7_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_8_btn"
+                android:id="@+id/cell_board_1_8_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_9_btn"
-                layout="@layout/clickable_board_cell" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:weightSum="1">
-
-            <include
-                android:id="@+id/cell_3_0_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_1_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_2_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_3_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_4_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_5_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_6_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_7_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_8_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_9_btn"
+                android:id="@+id/cell_board_1_9_btn"
                 layout="@layout/clickable_board_cell" />
         </TableRow>
 
@@ -220,91 +125,43 @@
             android:weightSum="1">
 
             <include
-                android:id="@+id/cell_4_0_btn"
+                android:id="@+id/cell_board_2_0_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_1_btn"
+                android:id="@+id/cell_board_2_1_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_2_btn"
+                android:id="@+id/cell_board_2_2_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_3_btn"
+                android:id="@+id/cell_board_2_3_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_4_btn"
+                android:id="@+id/cell_board_2_4_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_5_btn"
+                android:id="@+id/cell_board_2_5_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_6_btn"
+                android:id="@+id/cell_board_2_6_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_7_btn"
+                android:id="@+id/cell_board_2_7_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_8_btn"
+                android:id="@+id/cell_board_2_8_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_9_btn"
-                layout="@layout/clickable_board_cell" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:weightSum="1">
-
-            <include
-                android:id="@+id/cell_5_0_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_1_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_2_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_3_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_4_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_5_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_6_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_7_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_8_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_9_btn"
+                android:id="@+id/cell_board_2_9_btn"
                 layout="@layout/clickable_board_cell" />
         </TableRow>
 
@@ -316,91 +173,43 @@
             android:weightSum="1">
 
             <include
-                android:id="@+id/cell_6_0_btn"
+                android:id="@+id/cell_board_3_0_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_1_btn"
+                android:id="@+id/cell_board_3_1_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_2_btn"
+                android:id="@+id/cell_board_3_2_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_3_btn"
+                android:id="@+id/cell_board_3_3_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_4_btn"
+                android:id="@+id/cell_board_3_4_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_5_btn"
+                android:id="@+id/cell_board_3_5_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_6_btn"
+                android:id="@+id/cell_board_3_6_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_7_btn"
+                android:id="@+id/cell_board_3_7_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_8_btn"
+                android:id="@+id/cell_board_3_8_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_9_btn"
-                layout="@layout/clickable_board_cell" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:weightSum="1">
-
-            <include
-                android:id="@+id/cell_7_0_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_1_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_2_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_3_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_4_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_5_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_6_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_7_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_8_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_9_btn"
+                android:id="@+id/cell_board_3_9_btn"
                 layout="@layout/clickable_board_cell" />
         </TableRow>
 
@@ -412,43 +221,43 @@
             android:weightSum="1">
 
             <include
-                android:id="@+id/cell_8_0_btn"
+                android:id="@+id/cell_board_4_0_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_1_btn"
+                android:id="@+id/cell_board_4_1_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_2_btn"
+                android:id="@+id/cell_board_4_2_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_3_btn"
+                android:id="@+id/cell_board_4_3_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_4_btn"
+                android:id="@+id/cell_board_4_4_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_5_btn"
+                android:id="@+id/cell_board_4_5_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_6_btn"
+                android:id="@+id/cell_board_4_6_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_7_btn"
+                android:id="@+id/cell_board_4_7_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_8_btn"
+                android:id="@+id/cell_board_4_8_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_9_btn"
+                android:id="@+id/cell_board_4_9_btn"
                 layout="@layout/clickable_board_cell" />
         </TableRow>
 
@@ -460,43 +269,235 @@
             android:weightSum="1">
 
             <include
-                android:id="@+id/cell_9_0_btn"
+                android:id="@+id/cell_board_5_0_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_1_btn"
+                android:id="@+id/cell_board_5_1_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_2_btn"
+                android:id="@+id/cell_board_5_2_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_3_btn"
+                android:id="@+id/cell_board_5_3_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_4_btn"
+                android:id="@+id/cell_board_5_4_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_5_btn"
+                android:id="@+id/cell_board_5_5_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_6_btn"
+                android:id="@+id/cell_board_5_6_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_7_btn"
+                android:id="@+id/cell_board_5_7_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_8_btn"
+                android:id="@+id/cell_board_5_8_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_9_btn"
+                android:id="@+id/cell_board_5_9_btn"
+                layout="@layout/clickable_board_cell" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+
+            <include
+                android:id="@+id/cell_board_6_0_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_6_1_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_6_2_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_6_3_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_6_4_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_6_5_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_6_6_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_6_7_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_6_8_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_6_9_btn"
+                layout="@layout/clickable_board_cell" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+
+            <include
+                android:id="@+id/cell_board_7_0_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_7_1_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_7_2_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_7_3_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_7_4_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_7_5_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_7_6_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_7_7_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_7_8_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_7_9_btn"
+                layout="@layout/clickable_board_cell" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+
+            <include
+                android:id="@+id/cell_board_8_0_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_8_1_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_8_2_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_8_3_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_8_4_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_8_5_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_8_6_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_8_7_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_8_8_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_8_9_btn"
+                layout="@layout/clickable_board_cell" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+
+            <include
+                android:id="@+id/cell_board_9_0_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_9_1_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_9_2_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_9_3_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_9_4_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_9_5_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_9_6_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_9_7_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_9_8_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_board_9_9_btn"
                 layout="@layout/clickable_board_cell" />
         </TableRow>
 
@@ -506,8 +507,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/player_shots_banner" />
+
     <TableLayout
-        android:id="@+id/player_shots"
+        android:id="@+id/game_player_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="10dp"
+        android:shrinkColumns="*">
+
+        <include layout="@layout/board_row" />
+        <include layout="@layout/board_row" />
+        <include layout="@layout/board_row" />
+        <include layout="@layout/board_row" />
+        <include layout="@layout/board_row" />
+        <include layout="@layout/board_row" />
+        <include layout="@layout/board_row" />
+        <include layout="@layout/board_row" />
+        <include layout="@layout/board_row" />
+        <include layout="@layout/board_row" />
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/game_player_shots"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingStart="5dp"
@@ -525,91 +549,43 @@
             android:weightSum="1">
 
             <include
-                android:id="@+id/cell_0_0_btn"
+                android:id="@+id/cell_shots_0_0_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_1_btn"
+                android:id="@+id/cell_shots_0_1_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_2_btn"
+                android:id="@+id/cell_shots_0_2_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_3_btn"
+                android:id="@+id/cell_shots_0_3_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_4_btn"
+                android:id="@+id/cell_shots_0_4_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_5_btn"
+                android:id="@+id/cell_shots_0_5_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_6_btn"
+                android:id="@+id/cell_shots_0_6_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_7_btn"
+                android:id="@+id/cell_shots_0_7_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_8_btn"
+                android:id="@+id/cell_shots_0_8_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_0_9_btn"
-                layout="@layout/clickable_board_cell" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:weightSum="1">
-
-            <include
-                android:id="@+id/cell_1_0_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_1_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_2_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_3_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_4_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_5_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_6_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_7_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_8_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_1_9_btn"
+                android:id="@+id/cell_shots_0_9_btn"
                 layout="@layout/clickable_board_cell" />
         </TableRow>
 
@@ -621,91 +597,43 @@
             android:weightSum="1">
 
             <include
-                android:id="@+id/cell_2_0_btn"
+                android:id="@+id/cell_shots_1_0_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_1_btn"
+                android:id="@+id/cell_shots_1_1_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_2_btn"
+                android:id="@+id/cell_shots_1_2_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_3_btn"
+                android:id="@+id/cell_shots_1_3_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_4_btn"
+                android:id="@+id/cell_shots_1_4_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_5_btn"
+                android:id="@+id/cell_shots_1_5_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_6_btn"
+                android:id="@+id/cell_shots_1_6_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_7_btn"
+                android:id="@+id/cell_shots_1_7_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_8_btn"
+                android:id="@+id/cell_shots_1_8_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_2_9_btn"
-                layout="@layout/clickable_board_cell" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:weightSum="1">
-
-            <include
-                android:id="@+id/cell_3_0_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_1_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_2_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_3_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_4_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_5_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_6_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_7_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_8_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_3_9_btn"
+                android:id="@+id/cell_shots_1_9_btn"
                 layout="@layout/clickable_board_cell" />
         </TableRow>
 
@@ -717,91 +645,43 @@
             android:weightSum="1">
 
             <include
-                android:id="@+id/cell_4_0_btn"
+                android:id="@+id/cell_shots_2_0_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_1_btn"
+                android:id="@+id/cell_shots_2_1_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_2_btn"
+                android:id="@+id/cell_shots_2_2_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_3_btn"
+                android:id="@+id/cell_shots_2_3_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_4_btn"
+                android:id="@+id/cell_shots_2_4_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_5_btn"
+                android:id="@+id/cell_shots_2_5_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_6_btn"
+                android:id="@+id/cell_shots_2_6_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_7_btn"
+                android:id="@+id/cell_shots_2_7_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_8_btn"
+                android:id="@+id/cell_shots_2_8_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_4_9_btn"
-                layout="@layout/clickable_board_cell" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:weightSum="1">
-
-            <include
-                android:id="@+id/cell_5_0_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_1_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_2_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_3_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_4_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_5_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_6_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_7_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_8_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_5_9_btn"
+                android:id="@+id/cell_shots_2_9_btn"
                 layout="@layout/clickable_board_cell" />
         </TableRow>
 
@@ -813,91 +693,43 @@
             android:weightSum="1">
 
             <include
-                android:id="@+id/cell_6_0_btn"
+                android:id="@+id/cell_shots_3_0_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_1_btn"
+                android:id="@+id/cell_shots_3_1_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_2_btn"
+                android:id="@+id/cell_shots_3_2_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_3_btn"
+                android:id="@+id/cell_shots_3_3_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_4_btn"
+                android:id="@+id/cell_shots_3_4_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_5_btn"
+                android:id="@+id/cell_shots_3_5_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_6_btn"
+                android:id="@+id/cell_shots_3_6_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_7_btn"
+                android:id="@+id/cell_shots_3_7_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_8_btn"
+                android:id="@+id/cell_shots_3_8_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_6_9_btn"
-                layout="@layout/clickable_board_cell" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:weightSum="1">
-
-            <include
-                android:id="@+id/cell_7_0_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_1_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_2_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_3_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_4_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_5_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_6_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_7_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_8_btn"
-                layout="@layout/clickable_board_cell" />
-
-            <include
-                android:id="@+id/cell_7_9_btn"
+                android:id="@+id/cell_shots_3_9_btn"
                 layout="@layout/clickable_board_cell" />
         </TableRow>
 
@@ -909,43 +741,43 @@
             android:weightSum="1">
 
             <include
-                android:id="@+id/cell_8_0_btn"
+                android:id="@+id/cell_shots_4_0_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_1_btn"
+                android:id="@+id/cell_shots_4_1_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_2_btn"
+                android:id="@+id/cell_shots_4_2_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_3_btn"
+                android:id="@+id/cell_shots_4_3_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_4_btn"
+                android:id="@+id/cell_shots_4_4_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_5_btn"
+                android:id="@+id/cell_shots_4_5_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_6_btn"
+                android:id="@+id/cell_shots_4_6_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_7_btn"
+                android:id="@+id/cell_shots_4_7_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_8_btn"
+                android:id="@+id/cell_shots_4_8_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_8_9_btn"
+                android:id="@+id/cell_shots_4_9_btn"
                 layout="@layout/clickable_board_cell" />
         </TableRow>
 
@@ -957,48 +789,252 @@
             android:weightSum="1">
 
             <include
-                android:id="@+id/cell_9_0_btn"
+                android:id="@+id/cell_shots_5_0_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_1_btn"
+                android:id="@+id/cell_shots_5_1_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_2_btn"
+                android:id="@+id/cell_shots_5_2_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_3_btn"
+                android:id="@+id/cell_shots_5_3_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_4_btn"
+                android:id="@+id/cell_shots_5_4_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_5_btn"
+                android:id="@+id/cell_shots_5_5_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_6_btn"
+                android:id="@+id/cell_shots_5_6_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_7_btn"
+                android:id="@+id/cell_shots_5_7_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_8_btn"
+                android:id="@+id/cell_shots_5_8_btn"
                 layout="@layout/clickable_board_cell" />
 
             <include
-                android:id="@+id/cell_9_9_btn"
+                android:id="@+id/cell_shots_5_9_btn"
+                layout="@layout/clickable_board_cell" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+
+            <include
+                android:id="@+id/cell_shots_6_0_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_6_1_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_6_2_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_6_3_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_6_4_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_6_5_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_6_6_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_6_7_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_6_8_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_6_9_btn"
+                layout="@layout/clickable_board_cell" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+
+            <include
+                android:id="@+id/cell_shots_7_0_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_7_1_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_7_2_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_7_3_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_7_4_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_7_5_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_7_6_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_7_7_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_7_8_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_7_9_btn"
+                layout="@layout/clickable_board_cell" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+
+            <include
+                android:id="@+id/cell_shots_8_0_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_8_1_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_8_2_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_8_3_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_8_4_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_8_5_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_8_6_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_8_7_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_8_8_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_8_9_btn"
+                layout="@layout/clickable_board_cell" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+
+            <include
+                android:id="@+id/cell_shots_9_0_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_9_1_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_9_2_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_9_3_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_9_4_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_9_5_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_9_6_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_9_7_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_9_8_btn"
+                layout="@layout/clickable_board_cell" />
+
+            <include
+                android:id="@+id/cell_shots_9_9_btn"
                 layout="@layout/clickable_board_cell" />
         </TableRow>
 
     </TableLayout>
 
     <!-- TODO add SHOOT button -->
+    <!-- <Button
+            android:id="@+id/create_game_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="createGame"
+            android:text="@string/create_game_submit" /> -->
+    <Button
+        android:id="@+id/shoot_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="shoot"
+        android:text="@string/create_game_submit" />
 
 </LinearLayout>
