@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
 import android.widget.TableLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
@@ -21,6 +22,7 @@ class GameInProgressActivity : AppCompatActivity() {
 
     private lateinit var playerBoard: TableLayout
     private lateinit var shotsBoard: TableLayout
+    private lateinit var shareableLink: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,14 +33,23 @@ class GameInProgressActivity : AppCompatActivity() {
             extras.getString(MainActivity.PLAYER_ONE_EXTRA),
             Player::class.java
         )
+        val shareableLinkUrl = extras.getString(MainActivity.SHAREABLE_LINK_EXTRA)!!
         boardStatus = board!!
         shotsStatus = shots!!
+        fillShareableLink(shareableLinkUrl)
         addListeners()
+        // TODO copy shareableLik to clipboard and show a Toast
+        // reuse fun copyLinkToClipboard(view: View)
         Toast.makeText(this, "Game created by: $name", Toast.LENGTH_LONG).show()
     }
 
     fun shoot(view: View) {
 
+    }
+
+    private fun fillShareableLink(shareableLinkUrl: String) {
+        shareableLink = findViewById(R.id.shareable_link)
+        shareableLink.setText(shareableLinkUrl)
     }
 
     private fun addListeners() {
@@ -80,5 +91,15 @@ class GameInProgressActivity : AppCompatActivity() {
             boardStatus[clickedCell.coordinates.first][clickedCell.coordinates.second] =
                 clickedCell.status
         }
+    }
+
+    fun copyLinkToClipboard(view: View) {
+        // TODO copy to clipboard
+        // TODO and then show a Toast
+    }
+
+    fun refreshGameStatus(view: View) {
+        // TODO get game status
+        // TODO if status is READY hide views
     }
 }

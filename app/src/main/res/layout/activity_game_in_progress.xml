@@ -5,6 +5,31 @@
     android:gravity="center"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- TODO add a Button to copy to clipboard -->
+        <!-- Or automatically copy and add a Toast -->
+        <TextView
+            android:id="@+id/shareable_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="copyLinkToClipboard"
+            android:gravity="center"
+            android:text="@string/shareable_link_copy_button" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:onClick="refreshGameStatus"
+            android:text="@string/refresh_game_btn_text" />
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

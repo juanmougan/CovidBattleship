@@ -6,4 +6,6 @@
     <string name="create_game_submit">Create game!</string>
     <string name="player_board_banner">Your board</string>
     <string name="player_shots_banner">Your shots</string>
+    <string name="shareable_link_copy_button">Copy link</string>
+    <string name="refresh_game_btn_text">Refresh</string>
 </resources>

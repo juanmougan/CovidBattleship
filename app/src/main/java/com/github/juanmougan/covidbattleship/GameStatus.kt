@@ -1,5 +1,5 @@
 package com.github.juanmougan.covidbattleship
 
 enum class GameStatus {
-    CREATED;
+    CREATED, READY, IN_PROGRESS, FINISHED;
 }
