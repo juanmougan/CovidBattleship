@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         const val GAME_SHOTS_ID_TEMPLATE = "cell_shots_%d_%d_btn"
         const val PLAYER_ONE_EXTRA = "playerOne"
         const val SHAREABLE_LINK_EXTRA = "shareableLink"
+        const val CURRENT_GAME_ID = "currentGameId"
     }
 
     private lateinit var playerBoard: TableLayout
@@ -49,14 +50,15 @@ class MainActivity : AppCompatActivity() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ gameResponse ->
                 // TODO hide loading bar
-                Toast.makeText(this, "Created game with ID: ${gameResponse.id}", Toast.LENGTH_LONG)
-                    .show()
+//                Toast.makeText(this, "Created game with ID: ${gameResponse.id}", Toast.LENGTH_LONG)
+//                    .show()
                 // TODO maybe not the best approach, what about https://square.github.io/otto/
                 val gson = Gson()
                 val playerOne = gson.toJson(gameResponse.player1)
                 val intent = Intent(this, GameInProgressActivity::class.java).apply {
                     putExtra(PLAYER_ONE_EXTRA, playerOne)
                     putExtra(SHAREABLE_LINK_EXTRA, gameResponse.shareableLink)
+                    putExtra(CURRENT_GAME_ID, gameResponse.id.toString())
                 }
                 startActivity(intent)
             }, { error ->

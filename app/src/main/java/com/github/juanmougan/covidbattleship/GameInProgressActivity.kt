@@ -1,14 +1,16 @@
 package com.github.juanmougan.covidbattleship
 
+import android.annotation.SuppressLint
 import android.content.res.Resources
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageButton
-import android.widget.TableLayout
-import android.widget.TextView
-import android.widget.Toast
+import android.view.ViewGroup
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
+import java.util.*
 
 class GameInProgressActivity : AppCompatActivity() {
 
@@ -23,6 +25,8 @@ class GameInProgressActivity : AppCompatActivity() {
     private lateinit var playerBoard: TableLayout
     private lateinit var shotsBoard: TableLayout
     private lateinit var shareableLink: TextView
+    private lateinit var currentGameId: UUID
+    private val clipboardHandler: ClipboardHandler = ClipboardHandler(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,14 +37,18 @@ class GameInProgressActivity : AppCompatActivity() {
             extras.getString(MainActivity.PLAYER_ONE_EXTRA),
             Player::class.java
         )
+        currentGameId = UUID.fromString(extras.getString(MainActivity.CURRENT_GAME_ID))
         val shareableLinkUrl = extras.getString(MainActivity.SHAREABLE_LINK_EXTRA)!!
         boardStatus = board!!
         shotsStatus = shots!!
         fillShareableLink(shareableLinkUrl)
         addListeners()
-        // TODO copy shareableLik to clipboard and show a Toast
-        // reuse fun copyLinkToClipboard(view: View)
-        Toast.makeText(this, "Game created by: $name", Toast.LENGTH_LONG).show()
+        copyToClipboardAndNotify(shareableLinkUrl)
+    }
+
+    private fun copyToClipboardAndNotify(shareableLinkUrl: CharSequence) {
+        clipboardHandler.copy(shareableLinkUrl)
+        Toast.makeText(this, R.string.copied_shareable_link_to_clipboard, Toast.LENGTH_LONG).show()
     }
 
     fun shoot(view: View) {
@@ -94,12 +102,27 @@ class GameInProgressActivity : AppCompatActivity() {
     }
 
     fun copyLinkToClipboard(view: View) {
-        // TODO copy to clipboard
-        // TODO and then show a Toast
+        val link = findViewById<EditText>(R.id.shareable_link) as TextView
+        copyToClipboardAndNotify(link.text)
     }
 
+    @SuppressLint("CheckResult")
     fun refreshGameStatus(view: View) {
-        // TODO get game status
-        // TODO if status is READY hide views
+        val observable = GameApiService.create().getGameStatus(currentGameId)
+        observable.subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({ gameResponse ->
+                if (gameResponse.status.equals(GameStatus.READY)) {
+                    // Delete views
+                    val shareLayout = findViewById<LinearLayout>(R.id.share_game_layout)
+                    (shareLayout.parent as ViewGroup).removeView(shareLayout)
+                }
+            }, { error ->
+                Toast.makeText(
+                    this,
+                    "Error getting game status: ${error.message}",
+                    Toast.LENGTH_LONG
+                ).show()
+            })
     }
 }

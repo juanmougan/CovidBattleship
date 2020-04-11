@@ -8,4 +8,5 @@
     <string name="player_shots_banner">Your shots</string>
     <string name="shareable_link_copy_button">Copy link</string>
     <string name="refresh_game_btn_text">Refresh</string>
+    <string name="copied_shareable_link_to_clipboard">Copied shareable link to clipboard!</string>
 </resources>
