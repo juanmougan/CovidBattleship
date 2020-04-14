@@ -112,7 +112,7 @@ class GameInProgressActivity : AppCompatActivity() {
         observable.subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ gameResponse ->
-                if (gameResponse.status.equals(GameStatus.READY)) {
+                if (gameResponse.status == GameStatus.READY) {
                     // Delete views
                     val shareLayout = findViewById<LinearLayout>(R.id.share_game_layout)
                     (shareLayout.parent as ViewGroup).removeView(shareLayout)
