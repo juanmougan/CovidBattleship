@@ -4,4 +4,9 @@
     <string name="player_1_name_label">Your name</string>
     <string name="player_1_name_placeholder">Player 1\'s name</string>
     <string name="create_game_submit">Create game!</string>
+    <string name="player_board_banner">Your board</string>
+    <string name="player_shots_banner">Your shots</string>
+    <string name="shareable_link_copy_button">Copy link</string>
+    <string name="refresh_game_btn_text">Refresh</string>
+    <string name="copied_shareable_link_to_clipboard">Copied shareable link to clipboard!</string>
 </resources>

@@ -1,11 +1,16 @@
 package com.github.juanmougan.covidbattleship
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.res.Resources
 import android.os.Bundle
 import android.view.View
-import android.widget.*
+import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.TableLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.gson.Gson
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
@@ -15,13 +20,17 @@ class MainActivity : AppCompatActivity() {
         const val BOARD_ROW_NUMBER = 10
         const val BOARD_COL_NUMBER_PER_ROW = 10
         const val BOARD_ID_TEMPLATE = "cell_%d_%d_btn"
+        const val GAME_BOARD_ID_TEMPLATE = "cell_board_%d_%d_btn"
+        const val GAME_SHOTS_ID_TEMPLATE = "cell_shots_%d_%d_btn"
+        const val PLAYER_ONE_EXTRA = "playerOne"
+        const val SHAREABLE_LINK_EXTRA = "shareableLink"
+        const val CURRENT_GAME_ID = "currentGameId"
     }
 
     private lateinit var playerBoard: TableLayout
     private var boardStatus: Array<Array<CellStatus>> = Array(BOARD_ROW_NUMBER) {
         Array(BOARD_COL_NUMBER_PER_ROW) { CellStatus.SEA }
     }
-    private lateinit var submitButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,15 +50,17 @@ class MainActivity : AppCompatActivity() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ gameResponse ->
                 // TODO hide loading bar
-                Toast.makeText(this, "Created game with ID: ${gameResponse.id}", Toast.LENGTH_LONG)
-                    .show()
-                // TODO if POST is 201, transition to a new Activity: example here
-                // TODO think about serializing the board to re-draw it in the next Activity
-                // TODO the other possibility is to retrieve it with another network call
-                // val intent = Intent(this, DisplayMessageActivity::class.java).apply {
-                //            putExtra(EXTRA_MESSAGE, message)
-                //        }
-                //        startActivity(intent)
+//                Toast.makeText(this, "Created game with ID: ${gameResponse.id}", Toast.LENGTH_LONG)
+//                    .show()
+                // TODO maybe not the best approach, what about https://square.github.io/otto/
+                val gson = Gson()
+                val playerOne = gson.toJson(gameResponse.player1)
+                val intent = Intent(this, GameInProgressActivity::class.java).apply {
+                    putExtra(PLAYER_ONE_EXTRA, playerOne)
+                    putExtra(SHAREABLE_LINK_EXTRA, gameResponse.shareableLink)
+                    putExtra(CURRENT_GAME_ID, gameResponse.id.toString())
+                }
+                startActivity(intent)
             }, { error ->
                 // TODO hide loading bar
                 Toast.makeText(
