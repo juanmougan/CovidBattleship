@@ -10,7 +10,7 @@ interface GameApiService {
 
     companion object {
         //        val BASE_URL = "http://my-json-server.typicode.com/juanmougan/mock_battleship_api/";
-        val BASE_URL = "http://10.0.2.2:3000/";
+        val BASE_URL = "http://10.0.2.2:3000/"
 
         fun create(): GameApiService {
             val retrofit = Retrofit.Builder()

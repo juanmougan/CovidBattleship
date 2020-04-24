@@ -9,4 +9,6 @@
     <string name="shareable_link_copy_button">Copy link</string>
     <string name="refresh_game_btn_text">Refresh</string>
     <string name="copied_shareable_link_to_clipboard">Copied shareable link to clipboard!</string>
+    <string name="intent_filter_join_game">com.github.juanmougan.covidbattleship.intent_filter_join_game</string>
+    <string name="api_host">10.0.2.2</string>
 </resources>

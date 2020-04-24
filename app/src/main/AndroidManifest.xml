@@ -11,6 +11,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Player2JoinedActivity">
+            <intent-filter android:label="@string/intent_filter_join_game">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/api_host"
+                    android:pathPrefix="/games"
+                    android:port="3000"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
         <activity android:name=".GameInProgressActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
