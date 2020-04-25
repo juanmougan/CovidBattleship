@@ -42,6 +42,8 @@ class GameInProgressActivity : AppCompatActivity() {
         boardStatus = board!!
         shotsStatus = shots!!
         fillShareableLink(shareableLinkUrl)
+        val playerBoardBanner = findViewById<TextView>(R.id.player_board_banner)
+        playerBoardBanner.text = getString(R.string.player_banner_text, name)
         addListeners()
         copyToClipboardAndNotify(shareableLinkUrl)
     }

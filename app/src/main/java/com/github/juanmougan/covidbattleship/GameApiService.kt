@@ -31,4 +31,8 @@ interface GameApiService {
     @GET("games/{id}/status")
     @Headers("Content-Type: application/json")
     fun getGameStatus(@Path(value = "id") id: UUID): Observable<GameStatusResponse>
+
+    @POST("games/{id}")
+    @Headers("Content-Type: application/json")
+    fun joinGame(@Body gameRequest: GameRequest): Observable<GameResponse>
 }

@@ -21,7 +21,7 @@
                 <data
                     android:host="@string/api_host"
                     android:pathPrefix="/games"
-                    android:port="3000"
+                    android:port="@string/api_port"
                     android:scheme="http" />
             </intent-filter>
         </activity>

@@ -16,6 +16,7 @@ import io.reactivex.schedulers.Schedulers
 
 class MainActivity : AppCompatActivity() {
 
+    // TODO I think Intent's constant should contain the package name
     companion object {
         const val BOARD_ROW_NUMBER = 10
         const val BOARD_COL_NUMBER_PER_ROW = 10
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         const val GAME_BOARD_ID_TEMPLATE = "cell_board_%d_%d_btn"
         const val GAME_SHOTS_ID_TEMPLATE = "cell_shots_%d_%d_btn"
         const val PLAYER_ONE_EXTRA = "playerOne"
+        const val PLAYER_TWO_EXTRA = "playerTwo"
         const val SHAREABLE_LINK_EXTRA = "shareableLink"
         const val CURRENT_GAME_ID = "currentGameId"
     }
