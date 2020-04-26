@@ -515,6 +515,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="joinGame"
-            android:text="@string/create_game_submit" />
+            android:text="@string/join_game_submit" />
     </LinearLayout>
 </LinearLayout>

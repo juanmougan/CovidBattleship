@@ -33,19 +33,38 @@ class GameInProgressActivity : AppCompatActivity() {
         setContentView(R.layout.activity_game_in_progress)
         val extras = intent.extras
         val gson = Gson()
+        val playerExtraContent = resolveCurrentPlayer(extras)
         val (id, name, board, shots) = gson.fromJson(
-            extras.getString(MainActivity.PLAYER_ONE_EXTRA),
+            playerExtraContent,
             Player::class.java
         )
         currentGameId = UUID.fromString(extras.getString(MainActivity.CURRENT_GAME_ID))
-        val shareableLinkUrl = extras.getString(MainActivity.SHAREABLE_LINK_EXTRA)!!
+        maybeCreateShareableLink(extras)
         boardStatus = board!!
         shotsStatus = shots!!
-        fillShareableLink(shareableLinkUrl)
         val playerBoardBanner = findViewById<TextView>(R.id.player_board_banner)
         playerBoardBanner.text = getString(R.string.player_banner_text, name)
         addListeners()
-        copyToClipboardAndNotify(shareableLinkUrl)
+    }
+
+    private fun maybeCreateShareableLink(extras: Bundle?) {
+        val shareableLinkUrl: String? = extras?.getString(MainActivity.SHAREABLE_LINK_EXTRA)
+        shareableLinkUrl?.let {
+            fillShareableLink(shareableLinkUrl)
+            copyToClipboardAndNotify(shareableLinkUrl)
+        }
+    }
+
+    private fun resolveCurrentPlayer(extras: Bundle?): String {
+        val playerOneExtra = extras?.getString(MainActivity.PLAYER_ONE_EXTRA)
+        val playerTwoExtra = extras?.getString(MainActivity.PLAYER_TWO_EXTRA)
+        if (playerOneExtra != null) {
+            return playerOneExtra
+        }
+        if (playerTwoExtra != null) {
+            return playerTwoExtra
+        }
+        throw RuntimeException("Didn't get info for player 1 and player 2")
     }
 
     private fun copyToClipboardAndNotify(shareableLinkUrl: CharSequence) {
@@ -116,7 +135,7 @@ class GameInProgressActivity : AppCompatActivity() {
             .subscribe({ gameResponse ->
                 if (gameResponse.status == GameStatus.READY) {
                     // Delete views
-                    val shareLayout = findViewById<LinearLayout>(R.id.share_game_layout)
+                    val shareLayout = findViewById<RelativeLayout>(R.id.share_game_layout)
                     (shareLayout.parent as ViewGroup).removeView(shareLayout)
                 }
             }, { error ->
