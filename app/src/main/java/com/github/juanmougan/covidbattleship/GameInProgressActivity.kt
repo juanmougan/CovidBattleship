@@ -49,9 +49,13 @@ class GameInProgressActivity : AppCompatActivity() {
 
     private fun maybeCreateShareableLink(extras: Bundle?) {
         val shareableLinkUrl: String? = extras?.getString(MainActivity.SHAREABLE_LINK_EXTRA)
-        shareableLinkUrl?.let {
-            fillShareableLink(shareableLinkUrl)
-            copyToClipboardAndNotify(shareableLinkUrl)
+        if (shareableLinkUrl != null) {
+            shareableLinkUrl?.let {
+                fillShareableLink(shareableLinkUrl)
+                copyToClipboardAndNotify(shareableLinkUrl)
+            }
+        } else {
+            destroyShareLayout()
         }
     }
 
@@ -133,11 +137,7 @@ class GameInProgressActivity : AppCompatActivity() {
         observable.subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ gameResponse ->
-                if (gameResponse.status == GameStatus.READY) {
-                    // Delete views
-                    val shareLayout = findViewById<RelativeLayout>(R.id.share_game_layout)
-                    (shareLayout.parent as ViewGroup).removeView(shareLayout)
-                }
+                destroyShareLayoutIfNotNeeded(gameResponse)
             }, { error ->
                 Toast.makeText(
                     this,
@@ -145,5 +145,16 @@ class GameInProgressActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             })
+    }
+
+    private fun destroyShareLayoutIfNotNeeded(gameResponse: GameStatusResponse) {
+        if (gameResponse.status == GameStatus.READY) {
+            destroyShareLayout()
+        }
+    }
+
+    private fun destroyShareLayout() {
+        val shareLayout = findViewById<RelativeLayout>(R.id.share_game_layout)
+        (shareLayout.parent as ViewGroup).removeView(shareLayout)
     }
 }
